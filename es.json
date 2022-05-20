@@ -1,0 +1,64 @@
+{
+  "hot_threads": {
+    "hot_threads": {
+      "time": "2017-06-06T18:25:28-07:00",
+      "busiest_threads": 3,
+      "threads": [
+        {
+          "name": "Ruby-0-Thread-7",
+          "percent_of_cpu_time": 0.0,
+          "state": "timed_waiting",
+          "path": "/path/to/logstash-8.2.0/vendor/bundle/jruby/1.9/gems/puma-2.16.0-java/lib/puma/thread_pool.rb:187",
+          "traces": [
+            "java.lang.Object.wait(Native Method)",
+            "org.jruby.RubyThread.sleep(RubyThread.java:1002)",
+            "org.jruby.RubyKernel.sleep(RubyKernel.java:803)"
+          ]
+        },
+        {
+          "name": "[test2]>worker3",
+          "percent_of_cpu_time": 0.85,
+          "state": "waiting",
+          "traces": [
+            "sun.misc.Unsafe.park(Native Method)",
+            "java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)",
+            "java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:836)"
+          ]
+        },
+        {
+          "name": "[test2]>worker2",
+          "percent_of_cpu_time": 0.85,
+          "state": "runnable",
+          "traces": [
+            "org.jruby.RubyClass.allocate(RubyClass.java:225)",
+            "org.jruby.RubyClass.newInstance(RubyClass.java:856)",
+            "org.jruby.RubyClass$INVOKER$i$newInstance.call(RubyClass$INVOKER$i$newInstance.gen)"
+          ]
+        }
+      ]
+    }
+  },
+  "tasks": {
+    "nodes": {
+      "oTUltX4IQMOUUVeiohTt8A": {
+        "name": "H5dfFeA",
+        "transport_address": "127.0.0.1:9300",
+        "host": "127.0.0.1",
+        "ip": "127.0.0.1:9300",
+        "tasks": {
+          "oTUltX4IQMOUUVeiohTt8A:464": {
+            "node": "oTUltX4IQMOUUVeiohTt8A",
+            "id": 464,
+            "type": "transport",
+            "action": "indices:data/read/search",
+            "description": "indices[test], types[test], search_type[QUERY_THEN_FETCH], source[{\"query\":...}]",
+            "start_time_in_millis": 1483478610008,
+            "running_time_in_nanos": 13991383,
+            "cancellable": true,
+            "cancelled": false
+          }
+        }
+      }
+    }
+  }
+}

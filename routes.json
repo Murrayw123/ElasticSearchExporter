@@ -1,0 +1,4 @@
+{
+  "/_tasks?actions=*search&detailed*": "/tasks",
+  "/_node/hot_threads": "/hot_threads"
+}
