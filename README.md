@@ -4,6 +4,7 @@ what ElasticSearch queries are taking the most time.
 
 ### Requires
 - `Docker`
+- ElasticSearch v8.2
 
 ### How do I use it?
 `./run.sh`
